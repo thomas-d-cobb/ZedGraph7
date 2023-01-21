@@ -22,7 +22,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Collections;
 using System.Runtime.Serialization;
-using System.Security.Permissions;
+
 
 namespace ZedGraph
 {
@@ -58,17 +58,17 @@ namespace ZedGraph
 		/// </summary>
 		new public struct Default
 		{
-			/// <summary>
-			/// The default size for the <see cref="ArrowObj"/> item arrowhead
-			/// (<see cref="ArrowObj.Size"/> property).  Units are in points (1/72 inch).
-			/// </summary>
-			public static float Size = 12.0F;
+            /// <summary>
+            /// The default size for the <see cref="ArrowObj"/> item arrowhead
+            /// (<see cref="ArrowObj.Size"/> property).  Units are in points (1/72 inch).
+            /// </summary>
+            internal static float Size = 12.0F;
 			/// <summary>
 			/// The default display mode for the <see cref="ArrowObj"/> item arrowhead
 			/// (<see cref="ArrowObj.IsArrowHead"/> property).  true to show the
 			/// arrowhead, false to hide it.
 			/// </summary>
-			public static bool IsArrowHead = true;
+			internal static bool IsArrowHead = true;
 		}
 		#endregion
 
@@ -220,7 +220,7 @@ namespace ZedGraph
 		/// </summary>
 		/// <param name="info">A <see cref="SerializationInfo"/> instance that defines the serialized data</param>
 		/// <param name="context">A <see cref="StreamingContext"/> instance that contains the serialized data</param>
-		[SecurityPermissionAttribute( SecurityAction.Demand, SerializationFormatter = true )]
+
 		public override void GetObjectData( SerializationInfo info, StreamingContext context )
 		{
 			base.GetObjectData( info, context );

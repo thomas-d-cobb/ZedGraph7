@@ -21,7 +21,6 @@ using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Runtime.Serialization;
-using System.Security.Permissions;
 
 namespace ZedGraph
 {
@@ -106,39 +105,39 @@ namespace ZedGraph
 			/// The default mode for displaying line segments (<see cref="LineBase.IsVisible"/>
 			/// property).  True to show the line segments, false to hide them.
 			/// </summary>
-			public static bool IsVisible = true;
-			/// <summary>
-			/// The default width for line segments (<see cref="LineBase.Width"/> property).
-			/// Units are points (1/72 inch).
-			/// </summary>
-			public static float Width = 1;
-			/// <summary>
-			/// The default value for the <see cref="LineBase.IsAntiAlias"/>
-			/// property.
-			/// </summary>
-			public static bool IsAntiAlias = false;
+			internal static bool IsVisible = true;
+            /// <summary>
+            /// The default width for line segments (<see cref="LineBase.Width"/> property).
+            /// Units are points (1/72 inch).
+            /// </summary>
+            internal static float Width = 1;
+            /// <summary>
+            /// The default value for the <see cref="LineBase.IsAntiAlias"/>
+            /// property.
+            /// </summary>
+            internal static bool IsAntiAlias = false;
 
-			/// <summary>
-			/// The default drawing style for line segments (<see cref="LineBase.Style"/> property).
-			/// This is defined with the <see cref="DashStyle"/> enumeration.
-			/// </summary>
-			public static DashStyle Style = DashStyle.Solid;
-			/// <summary>
-			/// The default "dash on" size for drawing the line
-			/// (<see cref="LineBase.DashOn"/> property). Units are in points (1/72 inch).
-			/// </summary>
-			public static float DashOn = 1.0F;
-			/// <summary>
-			/// The default "dash off" size for drawing the the line
-			/// (<see cref="LineBase.DashOff"/> property). Units are in points (1/72 inch).
-			/// </summary>
-			public static float DashOff = 1.0F;
+            /// <summary>
+            /// The default drawing style for line segments (<see cref="LineBase.Style"/> property).
+            /// This is defined with the <see cref="DashStyle"/> enumeration.
+            /// </summary>
+            internal static DashStyle Style = DashStyle.Solid;
+            /// <summary>
+            /// The default "dash on" size for drawing the line
+            /// (<see cref="LineBase.DashOn"/> property). Units are in points (1/72 inch).
+            /// </summary>
+            internal static float DashOn = 1.0F;
+            /// <summary>
+            /// The default "dash off" size for drawing the the line
+            /// (<see cref="LineBase.DashOff"/> property). Units are in points (1/72 inch).
+            /// </summary>
+            internal static float DashOff = 1.0F;
 
-			/// <summary>
-			/// The default color for the line.
-			/// This is the default value for the <see cref="LineBase.Color"/> property.
-			/// </summary>
-			public static Color Color = Color.Black;
+            /// <summary>
+            /// The default color for the line.
+            /// This is the default value for the <see cref="LineBase.Color"/> property.
+            /// </summary>
+            internal static Color Color = Color.Black;
 		}
 
 	#endregion
@@ -379,7 +378,7 @@ namespace ZedGraph
 		/// serialized data</param>
 		/// <param name="context">A <see cref="StreamingContext"/> instance that contains the
 		/// serialized data</param>
-		[SecurityPermissionAttribute( SecurityAction.Demand, SerializationFormatter = true )]
+
 		public virtual void GetObjectData( SerializationInfo info, StreamingContext context )
 		{
 			info.AddValue( "schema0", schema0 );

@@ -21,7 +21,7 @@ using System.Drawing.Drawing2D;
 using System;
 using System.Text;
 using System.Drawing;
-using System.Security.Permissions;
+
 
 namespace ZedGraph
 {
@@ -131,7 +131,7 @@ namespace ZedGraph
 		/// </summary>
 		/// <param name="info">A <see cref="SerializationInfo"/> instance that defines the serialized data</param>
 		/// <param name="context">A <see cref="StreamingContext"/> instance that contains the serialized data</param>
-		[SecurityPermissionAttribute( SecurityAction.Demand, SerializationFormatter = true )]
+
 		public override void GetObjectData( SerializationInfo info, StreamingContext context )
 		{
 			base.GetObjectData( info, context );

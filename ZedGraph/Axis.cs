@@ -21,7 +21,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Runtime.Serialization;
-using System.Security.Permissions;
+
 
 namespace ZedGraph
 {
@@ -184,102 +184,102 @@ namespace ZedGraph
 			/// The default size for the gap between multiple axes
 			/// (<see cref="Axis.AxisGap"/> property). Units are in points (1/72 inch).
 			/// </summary>
-			public static float AxisGap = 5;
+			internal static float AxisGap = 5;
 
-			/// <summary>
-			/// The default setting for the gap between the scale labels and the axis title.
-			/// </summary>
-			public static float TitleGap = 0.0f;
+            /// <summary>
+            /// The default setting for the gap between the scale labels and the axis title.
+            /// </summary>
+            internal static float TitleGap = 0.0f;
 
-			/// <summary>
-			/// The default font family for the <see cref="Axis"/> <see cref="Title" /> text
-			/// font specification <see cref="FontSpec"/>
-			/// (<see cref="FontSpec.Family"/> property).
-			/// </summary>
-			public static string TitleFontFamily = "Arial";
-			/// <summary>
-			/// The default font size for the <see cref="Axis"/> <see cref="Title" /> text
-			/// font specification <see cref="FontSpec"/>
-			/// (<see cref="FontSpec.Size"/> property).  Units are
-			/// in points (1/72 inch).
-			/// </summary>
-			public static float TitleFontSize = 14;
-			/// <summary>
-			/// The default font color for the <see cref="Axis"/> <see cref="Title" /> text
-			/// font specification <see cref="FontSpec"/>
-			/// (<see cref="FontSpec.FontColor"/> property).
-			/// </summary>
-			public static Color TitleFontColor = Color.Black;
-			/// <summary>
-			/// The default font bold mode for the <see cref="Axis"/> <see cref="Title" /> text
-			/// font specification <see cref="FontSpec"/>
-			/// (<see cref="FontSpec.IsBold"/> property). true
-			/// for a bold typeface, false otherwise.
-			/// </summary>
-			public static bool TitleFontBold = true;
-			/// <summary>
-			/// The default font italic mode for the <see cref="Axis"/> <see cref="Title" /> text
-			/// font specification <see cref="FontSpec"/>
-			/// (<see cref="FontSpec.IsItalic"/> property). true
-			/// for an italic typeface, false otherwise.
-			/// </summary>
-			public static bool TitleFontItalic = false;
-			/// <summary>
-			/// The default font underline mode for the <see cref="Axis"/> <see cref="Title" /> text
-			/// font specification <see cref="FontSpec"/>
-			/// (<see cref="FontSpec.IsUnderline"/> property). true
-			/// for an underlined typeface, false otherwise.
-			/// </summary>
-			public static bool TitleFontUnderline = false;
-			/// <summary>
-			/// The default color for filling in the <see cref="Title" /> text background
-			/// (see <see cref="ZedGraph.Fill.Color"/> property).
-			/// </summary>
-			public static Color TitleFillColor = Color.White;
-			/// <summary>
-			/// The default custom brush for filling in the <see cref="Title" /> text background
-			/// (see <see cref="ZedGraph.Fill.Brush"/> property).
-			/// </summary>
-			public static Brush TitleFillBrush = null;
-			/// <summary>
-			/// The default fill mode for filling in the <see cref="Title" /> text background
-			/// (see <see cref="ZedGraph.Fill.Type"/> property).
-			/// </summary>
-			public static FillType TitleFillType = FillType.None;
+            /// <summary>
+            /// The default font family for the <see cref="Axis"/> <see cref="Title" /> text
+            /// font specification <see cref="FontSpec"/>
+            /// (<see cref="FontSpec.Family"/> property).
+            /// </summary>
+            internal static string TitleFontFamily = "Arial";
+            /// <summary>
+            /// The default font size for the <see cref="Axis"/> <see cref="Title" /> text
+            /// font specification <see cref="FontSpec"/>
+            /// (<see cref="FontSpec.Size"/> property).  Units are
+            /// in points (1/72 inch).
+            /// </summary>
+            internal static float TitleFontSize = 14;
+            /// <summary>
+            /// The default font color for the <see cref="Axis"/> <see cref="Title" /> text
+            /// font specification <see cref="FontSpec"/>
+            /// (<see cref="FontSpec.FontColor"/> property).
+            /// </summary>
+            internal static Color TitleFontColor = Color.Black;
+            /// <summary>
+            /// The default font bold mode for the <see cref="Axis"/> <see cref="Title" /> text
+            /// font specification <see cref="FontSpec"/>
+            /// (<see cref="FontSpec.IsBold"/> property). true
+            /// for a bold typeface, false otherwise.
+            /// </summary>
+            internal static bool TitleFontBold = true;
+            /// <summary>
+            /// The default font italic mode for the <see cref="Axis"/> <see cref="Title" /> text
+            /// font specification <see cref="FontSpec"/>
+            /// (<see cref="FontSpec.IsItalic"/> property). true
+            /// for an italic typeface, false otherwise.
+            /// </summary>
+            internal static bool TitleFontItalic = false;
+            /// <summary>
+            /// The default font underline mode for the <see cref="Axis"/> <see cref="Title" /> text
+            /// font specification <see cref="FontSpec"/>
+            /// (<see cref="FontSpec.IsUnderline"/> property). true
+            /// for an underlined typeface, false otherwise.
+            /// </summary>
+            internal static bool TitleFontUnderline = false;
+            /// <summary>
+            /// The default color for filling in the <see cref="Title" /> text background
+            /// (see <see cref="ZedGraph.Fill.Color"/> property).
+            /// </summary>
+            internal static Color TitleFillColor = Color.White;
+            /// <summary>
+            /// The default custom brush for filling in the <see cref="Title" /> text background
+            /// (see <see cref="ZedGraph.Fill.Brush"/> property).
+            /// </summary>
+            internal static Brush TitleFillBrush = null;
+            /// <summary>
+            /// The default fill mode for filling in the <see cref="Title" /> text background
+            /// (see <see cref="ZedGraph.Fill.Type"/> property).
+            /// </summary>
+            internal static FillType TitleFillType = FillType.None;
 
-			/// <summary>
-			/// The default color for the <see cref="Axis"/> itself
-			/// (<see cref="Axis.Color"/> property).  This color only affects the
-			/// the axis border.
-			/// </summary>
-			public static Color BorderColor = Color.Black;
-			/// <summary>
-			/// The default value for <see cref="Axis.IsAxisSegmentVisible"/>, which determines
-			/// whether or not the scale segment itself is visible
-			/// </summary>
-			public static bool IsAxisSegmentVisible = true;
+            /// <summary>
+            /// The default color for the <see cref="Axis"/> itself
+            /// (<see cref="Axis.Color"/> property).  This color only affects the
+            /// the axis border.
+            /// </summary>
+            internal static Color BorderColor = Color.Black;
+            /// <summary>
+            /// The default value for <see cref="Axis.IsAxisSegmentVisible"/>, which determines
+            /// whether or not the scale segment itself is visible
+            /// </summary>
+            internal static bool IsAxisSegmentVisible = true;
 
-			/// <summary>
-			/// The default setting for the <see cref="Axis"/> scale axis type
-			/// (<see cref="Axis.Type"/> property).  This value is set as per
-			/// the <see cref="AxisType"/> enumeration
-			/// </summary>
-			public static AxisType Type = AxisType.Linear;
+            /// <summary>
+            /// The default setting for the <see cref="Axis"/> scale axis type
+            /// (<see cref="Axis.Type"/> property).  This value is set as per
+            /// the <see cref="AxisType"/> enumeration
+            /// </summary>
+            internal static AxisType Type = AxisType.Linear;
 
-			/// <summary>
-			/// The default color for the axis segment.
-			/// </summary>
-			public static Color Color = Color.Black;
+            /// <summary>
+            /// The default color for the axis segment.
+            /// </summary>
+            internal static Color Color = Color.Black;
 
-			/// <summary>
-			/// The default setting for the axis space allocation.  This term, expressed in
-			/// points (1/72 inch) and scaled according to <see cref="PaneBase.CalcScaleFactor"/> for the
-			/// <see cref="GraphPane"/>, determines the minimum amount of space an axis must
-			/// have between the <see cref="Chart.Rect"/> and the
-			/// <see cref="PaneBase.Rect"/>.  This minimum space
-			/// applies whether <see cref="Axis.IsVisible"/> is true or false.
-			/// </summary>
-			public static float MinSpace = 0f;
+            /// <summary>
+            /// The default setting for the axis space allocation.  This term, expressed in
+            /// points (1/72 inch) and scaled according to <see cref="PaneBase.CalcScaleFactor"/> for the
+            /// <see cref="GraphPane"/>, determines the minimum amount of space an axis must
+            /// have between the <see cref="Chart.Rect"/> and the
+            /// <see cref="PaneBase.Rect"/>.  This minimum space
+            /// applies whether <see cref="Axis.IsVisible"/> is true or false.
+            /// </summary>
+            internal static float MinSpace = 0f;
 		}
 
 	#endregion
@@ -441,7 +441,7 @@ namespace ZedGraph
 		/// </summary>
 		/// <param name="info">A <see cref="SerializationInfo"/> instance that defines the serialized data</param>
 		/// <param name="context">A <see cref="StreamingContext"/> instance that contains the serialized data</param>
-		[SecurityPermissionAttribute( SecurityAction.Demand, SerializationFormatter = true )]
+
 		public virtual void GetObjectData( SerializationInfo info, StreamingContext context )
 		{
 			info.AddValue( "schema", schema );
