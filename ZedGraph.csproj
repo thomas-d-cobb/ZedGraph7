@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows10.0.17763.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>zedgraphkey.snk</AssemblyOriginatorKeyFile>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DocumentationFile>bin\Release\ZedGraph.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ZedGraph\ZedGraphControl.ContextMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZedGraph\ZedGraphControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZedGraph\ZedGraphControl.Events.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZedGraph\ZedGraphControl.Printing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZedGraph\ZedGraphControl.Properties.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ZedGraph\ZedGraphControl.ScrollBars.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Revision_History.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ZedGraph\HiLowBar.cs" />
+    <Compile Remove="ZedGraph\PaneLayoutMgr.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.3.246501">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.2" />
+  </ItemGroup>
+</Project>
